@@ -1,0 +1,81 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Backgroud
+{
+-current count:int
++bg1:image
+-goal:int
+-startTime:long
+-endTime:long
++water:image
++getTime():int
+-getCount():int
++getWaterNum():int
++getStartTime():long
++getEndTime():long
+}
+
+class GameWin
+{
++backgroud:Backgroud
++line:
++object:
++paint():void
+}
+
+
+class Gold
+{
++getGoldMin()
++getGoldMax()
+}
+class Rock
+{
++getRock():
+}
+
+class Line
+{
+-x:int
+-y:int
+-endx:int
+-endy:int
+-lenth:double
+-MIN_lenth:double
+-MAX_lenth:double
++hook:image
++getX():int
++getY():int
++getEndx():int
++getEndy():int
++getLenth():double
++getMIN_lenth():double
++getMAX_lenth():double
++getHook():iamge
+}
+class Object
+{
+-x:int
+-y:int
+-width:int
+-height:int
+-image:image
+-count:int
++getX():int
++getY():int
++getWidth():int
++getHeight():int
++getImage():iamge
++getCount():int
+}
+
+
+GameWin-->Backgroud
+GameWin-->Object
+GameWin-->Line
+Object<|--Gold
+Object<|--Rock
+
+
+@enduml
